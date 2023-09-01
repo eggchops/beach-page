@@ -1,0 +1,23 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <ellipse transform="rotate(90.1154 373 296.5)" stroke="#f97561" ry="98.69024" rx="68.49473" id="svg_1" cy="296.5" cx="373" fill="#f97561"/>
+  <g stroke="#000" fill="#f97561" id="svg_6">
+   <rect transform="rotate(50.2424 271 331)" id="svg_3" height="75" width="30" y="293.5" x="256" stroke="#f97561" fill="#f97561"/>
+   <rect transform="rotate(-0.320532 247 378)" id="svg_5" height="75" width="30" y="340.5" x="232" stroke="#f97561" fill="#f97561"/>
+  </g>
+  <g fill="#f97561" transform="rotate(123.998 474.606 356.535)" stroke="#f97561" id="svg_9">
+   <rect transform="rotate(50.2424 475 332)" stroke="#f97561" id="svg_7" height="75" width="30" y="294.5" x="460" fill="#f97561"/>
+   <rect transform="rotate(-0.320532 451 379)" stroke="#f97561" id="svg_8" height="75" width="30" y="341.5" x="436" fill="#f97561"/>
+  </g>
+  <ellipse transform="rotate(34.8772 264.5 233.5)" ry="16" rx="50.5" id="svg_10" cy="233.5" cx="264.5" stroke="#f97561" fill="#f97561"/>
+  <ellipse transform="rotate(-40.1295 467.5 229.5)" ry="16" rx="50.5" id="svg_12" cy="229.5" cx="467.5" stroke="#f97561" fill="#f97561"/>
+  <ellipse transform="rotate(8.54061 229.5 186)" ry="30.5" rx="17.5" id="svg_13" cy="186" cx="229.5" stroke="#f97561" fill="#f97561"/>
+  <ellipse transform="rotate(-20.263 487.5 182)" ry="30.5" rx="17.5" id="svg_15" cy="182" cx="487.5" stroke="#f97561" fill="#f97561"/>
+  <ellipse stroke="#000" ry="38" rx="13" id="svg_16" cy="216.5" cx="342" fill="#ffffff"/>
+  <ellipse stroke="#000" ry="38" rx="13" id="svg_18" cy="214.5" cx="403" fill="#ffffff"/>
+  <ellipse ry="27.5" rx="2" id="svg_19" cy="229" cx="342" stroke="#000" fill="#000000"/>
+  <ellipse ry="27.5" rx="2" id="svg_20" cy="227" cx="405" stroke="#000" fill="#000000"/>
+  <path d="m343,300.5c0,0 0,1 0,1c1,2 0.78986,3.07843 2,6c0.85571,2.06586 1.48627,3.82376 2,6c0.22977,0.97324 0.9176,1.38687 2,4c0.76538,1.84775 0.58578,5.58578 2,7c0.70709,0.70709 1.07611,0.61731 2,1c2.61313,1.0824 2.38687,4.9176 5,6c0.92389,0.38269 3.02582,0.67963 5,1c3.12143,0.50653 6,2 8,2c4,0 6,0 7,1c1,1 3,0 3,0c3,-1 5.15927,-1.61066 8,-3c3.23892,-1.58411 7.21167,-4.71411 10,-7c1.09366,-0.89661 6.20682,-4.81265 8,-7c2.28589,-2.78833 2.8819,-3.07278 6,-8c1.92807,-3.04672 3.49347,-3.87857 4,-7c0.16019,-0.98709 1,-2 2,-4l0,-1l0,0l0,-1" id="svg_24" stroke="#000" fill="none"/>
+ </g>
+</svg>

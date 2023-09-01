@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-AU" dir="ltr">
+	<head>
+		<title>David McNamara 🥚</title>
+		<link rel="icon" type="image/x-icon" href="./static/favicon.ico" />
+		<link rel="stylesheet" href="./static/css/style.css" />
+		<script src="./static/js/page.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+	</head>
+	<body >
+		<main class="col-12 themeable standard-mode" >
+			<div class="game-container body">
+
+			</div>
+			<div class="col-10 container body">
+				<h1>
+					welcome to the <strong>beach</strong>
+				</h1>
+				<p class="game-text" id="game-text">
+					&nbsp;
+				</p>
+				<img src="./static/crab.svg" class="crab" />
+			</div>
+			<div class="nav-panel-hider d-none d-lg-flex themeable">
+				<span class="d-none">
+					Hover to see nav
+				</span>
+			</div>
+			<div class="nav-panel flex-column d-lg-none col-xs-12 col-md-3 col-lg-2 themeable">
+				<div class="text-center menu-text">
+					menu
+				</div>
+				<ul class="flex-column nav-buttons-container">
+					<li>
+						<a href="javascript:void(0)" class="theme-button themeable" id="start-button"
+						onclick="start()" aria-label="Toggle Animations" title="Toggle Animations">
+						▶
+					</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="theme-button themeable"
+							onclick="toggleThemes()" aria-label="Toggle Dark or High Contrast Mode" title="Toggle Dark or High Contrast Mode">
+							☀
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="ml-2 mt-2 flag" id="pride" 
+							onclick="throwConfetti(prideColours)" aria-label="Trigger Pride Flag confetti"></a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="ml-2 flag" id="trans"
+							onclick="throwConfetti(transColours)" aria-label="Trigger Trans Pride Flag confetti"></a>
+					</li>
+				</ul>
+			</div>
+		</main>
+
+		
+	</body>
+	<script>
+		animateFlags();
+	</script>
+</html>

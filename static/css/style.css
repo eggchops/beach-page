@@ -1,0 +1,265 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+body{
+	overflow: hidden;
+}
+a,button{
+	position:relative;
+	z-index:4;
+}
+
+.container{
+	display: block;
+	height: 100vh;
+}
+
+.body{
+	text-align: left;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: x-large;
+	display:flex; 
+	flex-direction:column; 
+	justify-content:center;
+}
+
+@media only screen and (max-width: 768px){
+	[class="body"]{
+		font-size: xx-large;
+		margin-top: 50%;
+	}
+	[class="nav-panel"]{
+		min-width: 100vw;
+	}
+
+	[class="flag"]{
+		width: 48px !important;
+	}
+	[class="column"]{
+		min-height: 28px !important;
+	}
+}
+
+.numbers{
+	transition: right 600ms;
+}
+
+.foam{
+	width: 50px;
+	height: 50px;
+	border-radius: 55%;
+	background-color: white;
+	z-index: 2;
+	position: relative;
+}
+
+.waves{
+	background: linear-gradient(
+		to right,
+		hsl(0deg 0% 100%) 0%,
+		hsl(0deg 0% 100%) 5%,
+		hsl(200deg 85% 70%) 5%,
+		hsl(200deg 85% 70%) 20%,
+		hsl(200, 88%, 61%) 20%,
+		hsl(200, 88%, 61%) 60%,
+		hsl(200, 83%, 49%) 60%,
+		hsl(200, 83%, 49%) 100%
+	);
+	height: 48px;
+	width: 30%;
+	position:fixed;
+	right:0;
+	z-index: 1;
+	border-top-left-radius: 5%;
+	border-bottom-left-radius: 5%;
+}
+
+.player{
+	z-index:10;
+}
+
+/* .game-text{
+	text-align: center;
+} */
+
+.crab{
+	max-width: 20%;
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
+.nav-panel-hider{
+	display: block;
+	height: 7vh;
+	right: 0;
+	bottom:0;
+	position: absolute;
+	color: rgb(43, 43, 43);
+	background-color: rgb(171, 236, 251);
+	min-width: 75px;
+	border-top-left-radius: 50%;
+	justify-content: center;
+
+	&.standard-mode{
+		background-color: rgb(171, 236, 251);
+	}
+
+	&.dark-mode{
+		background-color: rgb(0, 145, 133);
+	}
+
+	&.high-contrast-mode{
+		color:black;
+		background-color: white;
+	}
+}
+
+.nav-panel-hider:hover{
+	background-color: transparent;
+}
+
+.nav-panel-hider:hover + .nav-panel{
+	display:flex !important;
+}
+
+.nav-panel:hover{
+	display:flex !important;
+}
+
+.nav-panel{
+	display: flex;
+	height: 25vh;
+	right: 0;
+	bottom:0;
+	position: absolute;
+	color: rgb(43, 43, 43);
+	background-color: rgb(171, 236, 251);
+	min-width: 200px;
+	border-top-left-radius: 50%;
+	justify-content: center;
+	transition: all 2s ease-in-out;
+
+	&.standard-mode{
+		background-color: rgb(171, 236, 251);
+	}
+
+	&.dark-mode{
+		background-color: rgb(0, 145, 133);
+	}
+
+	&.high-contrast-mode{
+		color:black;
+		background-color: white;
+	}
+}
+
+.menu-text{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: x-large;
+}
+
+.nav-buttons-container{
+	position:absolute;
+	bottom: 25%;
+	right: 5%;
+	list-style: none;
+}
+
+.standard-mode{
+	color: rgb(43, 43, 43);
+	background-color:rgb(250, 227, 198);
+}
+.dark-mode{
+	color:rgb(250, 227, 198);
+	background-color: rgb(43, 43, 43);
+}
+
+.high-contrast-mode{
+	color: white;
+	background-color: black;
+}
+
+.theme-button{
+	color: rgb(43, 43, 43);
+	background:none;
+	text-decoration: none;
+	&.dark-mode{
+		color:white;
+	}
+}
+
+.themeable{
+	transition: background-color 200ms;
+}
+
+/* 
+	Animated Pride Flags
+	Adapted for pure JS from https://www.joshwcomeau.com/animation/pride-flags 
+*/
+
+@keyframes oscillate {
+from {
+	transform: translateY(1px);
+}
+to {
+	transform: translateY(-1px);
+}
+}
+
+.flag{
+	display: flex;
+	width: 16px;
+	cursor:pointer;
+	position: absolute;
+	right: 5%;
+	margin-top: 25px;
+}
+
+.column{
+	flex: 1;
+	animation: oscillate 1300ms infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;
+	min-height: 16px;
+	min-width: 2px;
+}
+
+.column:first-child {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.column:last-child {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.pride{
+	background: linear-gradient(
+		to bottom,
+		hsl(0deg 0% 18%) 0% 12.5%,
+		hsl(30deg 60% 30%) 12.5% 25%,
+		hsl(0deg 90% 55%) 25% 37.5%,
+		hsl(30deg 95% 65%) 37.5% 50%,
+		hsl(55deg 90% 65%) 50% 62.5%,
+		hsl(100deg 65% 45%) 62.5% 75%,
+		hsl(220deg 80% 55%) 75% 87.5%,
+		hsl(265deg 80% 50%) 87.5% 100%
+	);
+}
+
+.trans{
+	background: linear-gradient(
+		to bottom,
+		hsl(200deg 85% 70%) 0%,
+		hsl(200deg 85% 70%) 20%,
+		hsl(350deg 85% 85%) 20%,
+		hsl(350deg 85% 85%) 40%,
+		hsl(0deg 0% 100%) 40%,
+		hsl(0deg 0% 100%) 60%,
+		hsl(350deg 85% 85%) 60%,
+		hsl(350deg 85% 85%) 80%,
+		hsl(200deg 85% 70%) 80%,
+		hsl(200deg 85% 70%) 100%
+	);
+}
