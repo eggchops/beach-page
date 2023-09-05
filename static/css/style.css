@@ -16,7 +16,7 @@ a,button{
 .body{
 	text-align: left;
 	font-family: 'Courier New', Courier, monospace;
-	font-size: x-large;
+	font-size: 4rem;
 	display:flex; 
 	flex-direction:column; 
 	justify-content:center;
@@ -75,17 +75,11 @@ a,button{
 
 .player{
 	z-index:10;
+	align-items: center;
 }
 
-/* .game-text{
-	text-align: center;
-} */
-
 .crab{
-	max-width: 20%;
-	position:absolute;
-	left:0;
-	bottom:0;
+	max-width: 10vw;
 }
 
 .nav-panel-hider{
@@ -155,7 +149,7 @@ a,button{
 
 .menu-text{
 	font-family: 'Courier New', Courier, monospace;
-	font-size: x-large;
+	font-size: 4rem;
 }
 
 .nav-buttons-container{
@@ -186,6 +180,7 @@ a,button{
 	&.dark-mode{
 		color:white;
 	}
+	font-size: 2rem;
 }
 
 .themeable{
@@ -208,7 +203,7 @@ to {
 
 .flag{
 	display: flex;
-	width: 16px;
+	width: 1.5rem;
 	cursor:pointer;
 	position: absolute;
 	right: 5%;

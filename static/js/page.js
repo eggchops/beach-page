@@ -145,14 +145,31 @@ function start(){
 	 },100);
 
 	 if(playEnabled){
-		window.onmousemove = function(e){
-			var positionY = e.pageY - (document.querySelector("#player").getBoundingClientRect().height / 2);
-			var positionX = e.pageX - (document.querySelector("#player").getBoundingClientRect().width / 2);
-
-			document.querySelector("#player").setAttribute("style","position:absolute;top:"
-				+positionY+"px;left:"+positionX+"px;");
+		if(isMobile()){
+			window.ontouchmove = function(e){
+				updatePlayerPosition(e,true);
+			}
+		} else{
+			window.onmousemove = function(e){
+				updatePlayerPosition(e);
+			}
 		}
 	}
+}
+
+function updatePlayerPosition(e, touch = false){
+	var y = touch ? e.changedTouches[0].pageY : e.pageY;
+	var x = touch ? e.changedTouches[0].pageX : e.pageX;
+
+	var positionY = y - (document.querySelector("#player").getBoundingClientRect().height / 2);
+	var positionX = x - (document.querySelector("#player").getBoundingClientRect().width / 2);
+
+	document.querySelector("#player").setAttribute("style","position:absolute;top:"
+		+positionY+"px;left:"+positionX+"px;");
+}
+
+function isMobile(){
+	return "ontouchstart" in document.documentElement;
 }
 
 function generateNumbers(count){
@@ -177,9 +194,7 @@ function generateNumbers(count){
 		currentHeight += 48;
 	}
 	let player = `<div id="player" style="position:absolute;right:50%;top:50%;display:none;">
-		<h1>
-			<i class="bi-person-fill"></i>
-		</h1>
+		<img src="./static/crab.svg" class="crab" />
 	</div>`;
 	var game = document.createElement("div");
 	game.innerHTML = player + numberObjects;
