@@ -87,8 +87,8 @@ function toggleThemes(){
 function start(){
 	gameState = !gameState;
 	document.querySelector("#start-button").innerHTML = gameState 
-		? "⏹" 
-		:  "▶" ;
+		? "<i class='bi bi-pause-fill'></i>" 
+		: "<i class='bi bi-play-fill'></i>" ;
 	if(!gameState){
 		window.clearInterval(interval);
 		document.querySelector(".game-container").innerHTML = "";
